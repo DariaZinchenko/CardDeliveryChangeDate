@@ -54,7 +54,7 @@ public class SubmitFormTest {
         $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
 
         String text = $("[data-test-id='success-notification'] .notification__content").getText().replaceAll("\\s\\s*", " ");
-        assertEquals("Встреча успешно запланирована на " + date, text);
+        assertEquals("Встреча успешно запланирована на1111 " + date, text);
 
         calendar.add(Calendar.DATE, 2);
         setDateByDatePicker(calendar);
